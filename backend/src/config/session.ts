@@ -1,3 +1,4 @@
+
 import "dotenv/config";
 import session from "express-session";
 import { RedisStore } from "connect-redis";
@@ -6,9 +7,7 @@ import { redisConnection } from "../queues/emailQueue";
 const sessionSecret = process.env.SESSION_SECRET;
 
 if (!sessionSecret || sessionSecret.length < 32) {
-  throw new Error(
-    "SESSION_SECRET must be at least 32 characters"
-  );
+  throw new Error("SESSION_SECRET must be at least 32 characters");
 }
 
 export const sessionMiddleware = session({
@@ -23,6 +22,8 @@ export const sessionMiddleware = session({
 
   resave: false,
   saveUninitialized: false,
+
+  proxy: process.env.NODE_ENV === "production",
 
   cookie: {
     httpOnly: true,
