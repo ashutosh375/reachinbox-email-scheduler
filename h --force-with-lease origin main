@@ -1,7 +1,0 @@
-[33mcommit 525d5f9ebda11e0daee7dfce58a0468b900ab822[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
-Author:     Prachi Goswami <goswamiprachi66@gmail.com>
-AuthorDate: Wed Nov 25 02:32:05 2026 +0530
-Commit:     Prachi Goswami <goswamiprachi66@gmail.com>
-CommitDate: Wed Nov 25 02:32:05 2026 +0530
-
-    Initial commit - ReachInbox Email Scheduler
