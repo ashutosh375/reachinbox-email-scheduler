@@ -45,7 +45,7 @@ import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 import { ExpressAdapter } from "@bull-board/express";
 
 const app = express();
-
+export { app };
 app.use(express.json({ limit: "2mb" }));
 
 // ============================================
@@ -1012,4 +1012,6 @@ async function startServer() {
 
 }
 
-startServer();
+if (require.main === module) {
+  startServer();
+}
